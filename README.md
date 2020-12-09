@@ -95,7 +95,7 @@
 Не знаете как найти `php.ini`? Загляните на этот ресурc [https://ru.hostings.info/schools/vse-o-fayle-phpini.html](https://ru.hostings.info/schools/vse-o-fayle-phpini.html). Вкратце это делается с помощью скрипта
 
 `<?php`  
-`phpinfo();`
+`phpinfo();`  
 `?>`
 
 Обратившись к нему через браузер увидите где он напротив `Loaded Configuration File"` или `Configuration File (php.ini) Path`.
