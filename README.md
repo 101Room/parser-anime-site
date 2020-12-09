@@ -66,16 +66,32 @@
 
 В первом случае в браузере переходим по адресу `http://localhost:4000/`, во втором по адресу `http://localhost/`. По умолчанию выполняется файл index.php. Если нужен другой, то название файла (или путь до него надо дописать в адресе).
 
-Чтобы остановить сервер (и вообще что-либо в терминале) нажмите Ctrl + C. [1]
+Чтобы остановить сервер (и вообще что-либо в терминале) нажмите Ctrl + C. [1, стр. 109]
 
-## `curl`
+## CURL
 
 Кто не работал ранее с `curl` получит при попытке запуска скрипта ошибку  
 `Fatal error: Uncaught Error: Call to undefined function curl_init() in `  
-в строке 96.
+в строке 96. Это происходит потому, что не подключено расширение CURL.
 
-И что с этим делать я напишу в другой день, потому что сама ещё не знаю что делать с этой хренью.
+### CURL для Windows
+
+Нужно проверить файл php.ini: раскоментировать (убрать ; перед строкой)  
+`extension=php_curl.dll`  
+Не знаете как найти `php.ini`? Загляните на этот ресурc [https://ru.hostings.info/schools/vse-o-fayle-phpini.html](https://ru.hostings.info/schools/vse-o-fayle-phpini.html). Вкратце это делается с помощью скрипта  
+`<?php
+phpinfo();
+?>`  
+Обратившись к нему через браузер увидите где он напротив `Loaded Configuration File"` или `Configuration File (php.ini) Path`.
+
+Кроме этого, нужно скопировать библиотеки `ssleay32.dll` и `libeay32.dll` из каталога где расположен PHP в папку, прописанную в переменной окружения `PATH`, например в `C:\Windows\system32`. Однако, если папку где находится PHP уже добавили в `PATH`, это, видимо, не требуется. [1, стр. 740 и 3]
+
+### CURL для Ubuntu
+
+Нужно установить расширение:  
+`$ sudo apt-get install php7-curl`
 
 Использованные источники:
 1. Дмитрий Котеров, Игорь Симдянов "PHP 7 в подлиннике"
 2. [https://www.apachelounge.com/viewtopic.php?p=38034](https://www.apachelounge.com/viewtopic.php?p=38034)
+3. [https://www.cyberforum.ru/php-network/thread656155-page2.html](https://www.cyberforum.ru/php-network/thread656155-page2.html)
