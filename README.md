@@ -39,9 +39,12 @@
 
 Последние поддерживаемые версии Visual C++ для скачивания есть на данном ресурсе: [https://support.microsoft.com/ru-ru/help/2977003/the-latest-supported-visual-c-downloads](https://support.microsoft.com/ru-ru/help/2977003/the-latest-supported-visual-c-downloads).
 
-Допустим, PHP загружен. Можно распаковать его куда-нибудь и запустить из командной строки, зайдя в данную директорию. Например, распаковать в `C:\php`, тогда для проверки работы в командной строке набрать  
-`cd C:\php`  
-а затем (это отобразит текущую версию PHP)  
+Допустим, PHP загружен. Можно распаковать его куда-нибудь и запустить из командной строки, зайдя в данную директорию. Например, распаковать в `C:\php`, тогда для проверки работы в командной строке набрать
+
+`cd C:\php`
+
+а затем (это отобразит текущую версию PHP)
+
 `php -v`
 
 А чтобы дуростью не страдать, лучше добавить `C:\php` в переменную окружения `PATH`. Тогда можно будет вызывать php из любой папки, а не только `C:\php`. Как добавить написано тут: [https://docs.microsoft.com/ru-ru/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)](https://docs.microsoft.com/ru-ru/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)). [1, стр. 105]
